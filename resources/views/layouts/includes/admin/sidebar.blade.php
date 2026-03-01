@@ -10,7 +10,7 @@
       'active' => request()->routeIs('admin.dashboard')
       ],
       [
-         'header' => 'Administración',
+         'header' => 'Gestión',
       ],
       [
       'name' => 'Citas',
@@ -19,27 +19,11 @@
       'active' => request()->routeIs('admin.dashboard')
       ],
       [
-      'name' => 'Personal',
-      'icon' => 'fa-solid fa-cow',
-      'href' => route('admin.dashboard'),
-      'active' => request()->routeIs('admin.dashboard'),
-      'submenu' => [
-         [
-            'name' => 'Productos',
-            'href' => '#',
-            'active' => 'false',
-         ],
-         [
-            'name' => 'Categorias',
-            'href' => '#',
-            'active' => 'false',
-         ],
-         [
-            'name' => 'Animales',
-            'href' => '#',
-            'active' => 'false',
-         ],
-      ],
+      'name' => 'Roles y Permisos',
+      'icon' => 'fa-solid fa-shield-halved',
+      'href' => route('admin.roles.index'),
+      'active' => request()->routeIs('admin.roles.*'),
+
       ],
 
    ];
