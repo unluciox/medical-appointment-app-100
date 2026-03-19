@@ -29,7 +29,7 @@
         <!-- Styles -->
         @livewireStyles
     </head>
-    <body class="font-sans antialiased bg-gray-400">
+    <body class="font-sans antialiased bg-gray-300">
 
     @include('layouts.includes.admin.navigation')
     @include('layouts.includes.admin.sidebar')

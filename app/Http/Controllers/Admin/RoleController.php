@@ -97,7 +97,7 @@ class RoleController extends Controller
 
         //Rediccionara a la misma vista de editar
 
-        return redirect(route('admin.roles.edit' , $role));
+        return redirect(route('admin.roles.index' , $role));
 
     }
 
