@@ -14,9 +14,15 @@
       ],
       [
       'name' => 'Citas',
-      'icon' => 'fa-solid fa-user-group',
-      'href' => route('admin.dashboard'),
-      'active' => request()->routeIs('admin.dashboard')
+      'icon' => 'fa-solid fa-calendar-check',
+      'href' => route('admin.appointments.index'),
+      'active' => request()->routeIs('admin.appointments.*', 'admin.consultation.*')
+      ],
+      [
+      'name' => 'Doctores',
+      'icon' => 'fa-solid fa-user-doctor',
+      'href' => route('admin.doctors.index'),
+      'active' => request()->routeIs('admin.doctors.*')
       ],
       [
       'name' => 'Roles y Permisos',
@@ -29,7 +35,7 @@
       'name' => 'Usuarios',
       'icon' => 'fa-solid fa-users',
       'href' => route('admin.users.index'),
-      'active' => request()->routeIs('admin.users.*'),
+      'active' => request()->requestUri === '/admin/users' || request()->routeIs('admin.users.*'),
       ],
       [
       'name' => 'Pacientes',

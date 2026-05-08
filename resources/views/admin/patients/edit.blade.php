@@ -6,8 +6,8 @@
       'informacion-general'=> ['blood_type_id','observations'],
       'contacto-emergencia'=>['emergency_contact_name','emergency_contact_phone','emergency_contact_relationship'],
     ];
-    //petaña por defecto
-    $initialTab='datos-personales';
+    //pestaña por defecto o desde la URL
+    $initialTab = request('tab', 'datos-personales');
 
     //si hay errores, buscamos en que grupoestan
 
